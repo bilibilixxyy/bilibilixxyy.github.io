@@ -6,3 +6,7 @@ disqus:
   shortname: leetcode-solution
 
 google_analytics: UA-39175404-1
+
+url: "http://www.leetcode-solution.com"
+plugins:
+- jekyll-sitemap
