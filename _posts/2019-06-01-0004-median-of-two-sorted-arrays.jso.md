@@ -229,6 +229,7 @@ Below is the accepted code:
 
 [中文翻译](https://zhuanlan.zhihu.com/p/70654378)（
 [@zhgy](https://leetcode.com/zhgy/) 提供）
+
 ### Solution 2
 This problem is notoriously hard to implement due to all the corner cases.
 Most implementations consider odd-lengthed and even-lengthed arrays as two
@@ -433,6 +434,7 @@ eventually boils down to the following concise code:
 
 If you have any suggestions to make the logic and implementation even more
 cleaner. Please do let me know!
+
 ### Solution 3
  **Explanation**
 
@@ -470,4 +472,5 @@ As the following: **time=O(log(m + n))**
     	else 
     	    return getkth(A, aStart,       B, bStart + k/2, k - k/2);// Check: bRight + aLeft
     }
+
 

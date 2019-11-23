@@ -67,6 +67,7 @@ them in bound.
             sb[0].append(sb[idx]);
         return sb[0].toString();
     }
+
 ### Solution 2
     
     
@@ -134,6 +135,7 @@ my 16ms code in c++:
             return result;
         }
     };
+
 ### Solution 3
     
     
@@ -159,4 +161,5 @@ my 16ms code in c++:
                 index += step
     
             return ''.join(L)
+
 

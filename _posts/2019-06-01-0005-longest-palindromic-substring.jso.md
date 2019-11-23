@@ -52,6 +52,7 @@ The performance is pretty good, surprisingly.
     		maxLen = k - j - 1;
     	}
     }}
+
 ### Solution 2
 `dp(i, j)` represents whether `s(i ... j)` can form a palindromic substring,
 `dp(i, j)` is true when `s(i)` equals to `s(j)` and `s(i+1 ... j-1)` is a
@@ -78,6 +79,7 @@ one. Time complexity O(n^2).
         
       return res;
     }
+
 ### Solution 3
     
     
@@ -96,4 +98,5 @@ one. Time complexity O(n^2).
         }
         return s.substr(min_start, max_len);
     }
+
 

@@ -46,6 +46,7 @@ number 0 itself.
             return sentinel.next;
         }
     }
+
 ### Solution 2
     
     
@@ -62,6 +63,7 @@ number 0 itself.
         }
         return preHead.next;
     }
+
 ### Solution 3
     
     
@@ -82,4 +84,5 @@ number 0 itself.
             n.next = ListNode(val)
             n = n.next
         return root.next
+
 

@@ -56,6 +56,7 @@ pointers can only move forward.
             }
             return max;
         }
+
 ### Solution 2
     
     
@@ -70,6 +71,7 @@ pointers can only move forward.
             }
             return maxLen;
         }
+
 ### Solution 3
 The idea is use a hash set to track the longest substring without repeating
 characters so far, use a fast pointer j to see if character j is in the hash
@@ -94,4 +96,5 @@ until we can put character j to the hash set.
         
         return max;
     }
+
 
