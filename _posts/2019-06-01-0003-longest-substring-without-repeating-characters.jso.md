@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3.Longest Substring Without Repeating Characters
+title: 3. Longest Substring Without Repeating Characters
 ---
 ### Question
 Given a string, find the length of the **longest substring** without repeating
@@ -58,6 +58,7 @@ pointers can only move forward.
             return max;
         }
 
+
 ### Solution 2
     
     
@@ -72,6 +73,7 @@ pointers can only move forward.
             }
             return maxLen;
         }
+
 
 ### Solution 3
 The idea is use a hash set to track the longest substring without repeating
@@ -97,5 +99,6 @@ until we can put character j to the hash set.
         
         return max;
     }
+
 
 

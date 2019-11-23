@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2.Add Two Numbers
+title: 2. Add Two Numbers
 ---
 ### Question
 You are given two **non-empty** linked lists representing two non-negative
@@ -48,6 +48,7 @@ number 0 itself.
         }
     }
 
+
 ### Solution 2
     
     
@@ -64,6 +65,7 @@ number 0 itself.
         }
         return preHead.next;
     }
+
 
 ### Solution 3
     
@@ -85,5 +87,6 @@ number 0 itself.
             n.next = ListNode(val)
             n = n.next
         return root.next
+
 
 

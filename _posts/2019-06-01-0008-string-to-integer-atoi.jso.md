@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 8.String to Integer (atoi)
+title: 8. String to Integer (atoi)
 ---
 ### Question
 Implement `atoi` which converts a string to an integer.
@@ -69,10 +69,12 @@ If no valid conversion could be performed, a zero value is returned.
     **Output:** -2147483648
     **Explanation:** The number "-91283472332" is out of the range of a 32-bit signed integer.
                   Thefore INT_MIN (−231) is returned.
+
 ### Solution 1
 The description is not clear not all unless you click on the hint. What's the
 point of testing all the "+-1" or "-+1" without any input spec nor any
 situation where input is obtained.
+
 
 ### Solution 2
 I think we only need to handle four cases:
@@ -101,6 +103,7 @@ Is there any better solution? Thanks for pointing out!
         }
         return base * sign;
     }
+
 
 ### Solution 3
     
@@ -134,5 +137,6 @@ Is there any better solution? Thanks for pointing out!
         }
         return total * sign;
     }
+
 
 

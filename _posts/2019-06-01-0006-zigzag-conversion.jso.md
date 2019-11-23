@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 6.ZigZag Conversion
+title: 6. ZigZag Conversion
 ---
 ### Question
 The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number
@@ -68,6 +68,7 @@ them in bound.
             sb[0].append(sb[idx]);
         return sb[0].toString();
     }
+
 
 ### Solution 2
     
@@ -137,6 +138,7 @@ my 16ms code in c++:
         }
     };
 
+
 ### Solution 3
     
     
@@ -162,5 +164,6 @@ my 16ms code in c++:
                 index += step
     
             return ''.join(L)
+
 
 

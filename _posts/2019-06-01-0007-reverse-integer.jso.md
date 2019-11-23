@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 7.Reverse Integer
+title: 7. Reverse Integer
 ---
 ### Question
 Given a 32-bit signed integer, reverse digits of an integer.
@@ -60,6 +60,7 @@ Sorry for my bad english.
         return result;
     }
 
+
 ### Solution 2
     
     
@@ -93,6 +94,7 @@ Sorry for my bad english.
         }
     
 
+
 ### Solution 3
 Get the `s`ign, get the `r`eversed absolute integer, and return their product
 if `r` didn't "overflow".
@@ -114,5 +116,6 @@ As compressed one-liner, for potential comparison:
     
 
 Anybody got something shorter?
+
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 9.Palindrome Number
+title: 9. Palindrome Number
 ---
 ### Question
 Determine whether an integer is a palindrome. An integer is a palindrome when
@@ -35,6 +35,7 @@ it reads the same backward as forward.
 **Follow up:**
 
 Coud you solve it without converting the integer to a string?
+
 ### Solution 1
 compare half of the digits in x, so don't need to deal with overflow.
 
@@ -49,6 +50,7 @@ compare half of the digits in x, so don't need to deal with overflow.
         }
         return (x==rev || x==rev/10);
     }
+
 
 ### Solution 2
     
@@ -67,9 +69,11 @@ compare half of the digits in x, so don't need to deal with overflow.
         }
     };
 
+
 ### Solution 3
   * Impossible to solve without extra space. Always need space for constants, variables or whatever. Recursion calls will take space for call stack.
 
   * If you are talking about constant space, then even declaring a string / stack will take constant space. (In fact at most (log(10, INT_MAX) * sizeof char), which is no worse than declaring an integer or more). Actually, even recursion will take constant space.
+
 
 

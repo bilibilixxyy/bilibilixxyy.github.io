@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 10.Regular Expression Matching
+title: 10. Regular Expression Matching
 ---
 ### Question
 Given an input string (`s`) and a pattern (`p`), implement regular expression
@@ -72,6 +72,7 @@ The matching should cover the **entire** input string (not partial).
     p = "mis*is*p*."
     **Output:** false
     
+
 ### Solution 1
 This Solution use 2D DP. beat 90% solutions, very simple.
 
@@ -126,6 +127,7 @@ Here is the solution
         }
         return dp[s.length()][p.length()];
     }
+
 
 ### Solution 2
 Please refer to [my blog
@@ -185,9 +187,11 @@ solved similarly.
     };
     
 
+
 ### Solution 3
 In the given examples, the last one `isMatch("aab", "c*a*b") → true`; don't
 understand why these two strings matches?  
 Can someone please help me understand this example?
+
 
 
