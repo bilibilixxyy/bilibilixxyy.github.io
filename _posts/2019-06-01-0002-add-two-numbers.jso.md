@@ -1,8 +1,6 @@
 ---
 layout: post
-title: 2
-.
-Add Two Numbers
+title: 2.Add Two Numbers
 ---
 ### Question
 You are given two **non-empty** linked lists representing two non-negative
