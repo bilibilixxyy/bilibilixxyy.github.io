@@ -1,0 +1,133 @@
+---
+layout: post
+title: 108. Convert Sorted Array to Binary Search Tree
+---
+### Question
+Given an array where elements are sorted in ascending order, convert it to a
+height balanced BST.
+
+For this problem, a height-balanced binary tree is defined as a binary tree in
+which the depth of the two subtrees of _every_ node never differ by more than
+1.
+
+ **Example:**
+
+    
+    
+    Given the sorted array: [-10,-3,0,5,9],
+    
+    One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
+    
+          0
+         / \
+       -3   9
+       /   /
+     -10  5
+    
+
+### Solution 1
+Hi everyone, this is my accepted recursive Java solution. I get overflow
+problems at first because I didn't use mid - 1 and mid + 1 as the bound. Hope
+this helps :)
+
+    
+    
+    public TreeNode sortedArrayToBST(int[] num) {
+        if (num.length == 0) {
+            return null;
+        }
+        TreeNode head = helper(num, 0, num.length - 1);
+        return head;
+    }
+    
+    public TreeNode helper(int[] num, int low, int high) {
+        if (low > high) { // Done
+            return null;
+        }
+        int mid = (low + high) / 2;
+        TreeNode node = new TreeNode(num[mid]);
+        node.left = helper(num, low, mid - 1);
+        node.right = helper(num, mid + 1, high);
+        return node;
+    }
+
+
+### Solution 2
+The idea is to find the root first, then recursively build each left and right
+subtree
+
+    
+    
+    # Definition for a  binary tree node
+    # class TreeNode:
+    #     def __init__(self, x):
+    #         self.val = x
+    #         self.left = None
+    #         self.right = None
+    
+    class Solution:
+        # @param num, a list of integers
+        # @return a tree node
+        # 12:37
+        def sortedArrayToBST(self, num):
+            if not num:
+                return None
+    
+            mid = len(num) // 2
+    
+            root = TreeNode(num[mid])
+            root.left = self.sortedArrayToBST(num[:mid])
+            root.right = self.sortedArrayToBST(num[mid+1:])
+    
+            return root
+
+
+### Solution 3
+I came up with the recursion solution first and tried to translate it into an
+iterative solution. It is very similar to doing a tree inorder traversal, I
+use three stacks - nodeStack stores the node I am going to process next, and
+**leftIndexStack** and **rightIndexStack** store the range where this node
+need to read from the **nums**.
+
+    
+    
+     public class Solution {
+        
+        public TreeNode sortedArrayToBST(int[] nums) {
+            
+            int len = nums.length;
+            if ( len == 0 ) { return null; }
+            
+            // 0 as a placeholder
+            TreeNode head = new TreeNode(0); 
+            
+            Deque<TreeNode> nodeStack       = new LinkedList<TreeNode>() {{ push(head);  }};
+            Deque<Integer>  leftIndexStack  = new LinkedList<Integer>()  {{ push(0);     }};
+            Deque<Integer>  rightIndexStack = new LinkedList<Integer>()  {{ push(len-1); }};
+            
+            while ( !nodeStack.isEmpty() ) {
+                TreeNode currNode = nodeStack.pop();
+                int left  = leftIndexStack.pop();
+                int right = rightIndexStack.pop();
+                int mid   = left + (right-left)/2; // avoid overflow
+                currNode.val = nums[mid];
+                if ( left <= mid-1 ) {
+                    currNode.left = new TreeNode(0);  
+                    nodeStack.push(currNode.left);
+                    leftIndexStack.push(left);
+                    rightIndexStack.push(mid-1);
+                }
+                if ( mid+1 <= right ) {
+                    currNode.right = new TreeNode(0);
+                    nodeStack.push(currNode.right);
+                    leftIndexStack.push(mid+1);
+                    rightIndexStack.push(right);
+                }
+            }
+            return head;
+        }
+    
+    }
+
+
+
