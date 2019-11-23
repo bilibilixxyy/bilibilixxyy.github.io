@@ -22,6 +22,7 @@ may assume that the maximum length of **s** is 1000.
     **Input:** "cbbd"
     **Output:** "bb"
     
+
 ### Solution 1
 The performance is pretty good, surprisingly.
 

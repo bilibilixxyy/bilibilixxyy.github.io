@@ -43,6 +43,7 @@ of rows:
     A   L S  I G
     Y A   H R
     P     I
+
 ### Solution 1
 Create nRows StringBuffers, and keep collecting characters from original
 string to corresponding StringBuffer. Just take care of your index to keep

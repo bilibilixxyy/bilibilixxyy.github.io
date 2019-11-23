@@ -33,6 +33,7 @@ characters.
     **Explanation:** The answer is "wke", with the length of 3. 
                  Note that the answer must be a **substring** , "pwke" is a _subsequence_ and not a substring.
     
+
 ### Solution 1
 the basic idea is, keep a hashmap which stores the characters in string as
 keys and their positions as values, and keep two pointers which define the max

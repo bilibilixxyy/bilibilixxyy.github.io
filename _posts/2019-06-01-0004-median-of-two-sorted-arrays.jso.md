@@ -30,6 +30,7 @@ You may assume **nums1** and **nums2**  cannot be both empty.
     
     The median is (2 + 3)/2 = 2.5
     
+
 ### Solution 1
 To solve this problem, we need to understand "What is the use of median". In
 statistics, the median is used for `dividing a set into two equal length
